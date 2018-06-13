@@ -21,7 +21,7 @@ def arabic_to_roman(param):
             raise ValueError("Number doesn't exist")
 
         if num in arab_to_rom.keys():
-            return(arab_to_rom[num])
+            return arab_to_rom[num]
 
         for key, val in arab_to_rom.items():
             a, num = divmod(num, key)
@@ -29,4 +29,4 @@ def arabic_to_roman(param):
         return ''.join(roman)
 
     except ValueError as e:
-        return(e)
+        raise e
